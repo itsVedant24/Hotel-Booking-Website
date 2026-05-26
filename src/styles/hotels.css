@@ -1,0 +1,97 @@
+/* ===== HOTELS GRID ===== */
+.hotels-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hotels-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hotels-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== HOTEL CARD ===== */
+.hotel-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.hotel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== IMAGE RATIO ===== */
+.hotel-image {
+  width: 100%;
+  aspect-ratio: 16 / 10; /* SAME RATIO FOR ALL IMAGES */
+  object-fit: cover;
+}
+
+/* ===== CARD CONTENT ===== */
+.hotel-info {
+  padding: 16px;
+}
+
+.hotel-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.hotel-info p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.hotel-info .price {
+  font-weight: 600;
+  color: #0071c2;
+  margin-top: 10px;
+}
+
+.hotels-page {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+.filters-sidebar {
+  position: sticky;
+  top: 90px;
+  height: fit-content;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.hotels-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}

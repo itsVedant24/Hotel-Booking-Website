@@ -1,0 +1,102 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  background-color: #003580;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== LOGO ===== */
+.logo-btn img {
+  height: 32px;
+}
+
+.nav-btn {
+  text-decoration: none;
+}
+
+/* ===== NAV SECTIONS ===== */
+.nav-left,
+.nav-center,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===== BUTTON BASE ===== */
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.nav-btn img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+/* ===== HOVER EFFECT ===== */
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+/* ===== ACTIVE (STAYS) ===== */
+.nav-btn.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== RIGHT SIDE BUTTON VARIANTS ===== */
+.nav-btn.primary {
+  background: #fff;
+  color: #003580;
+  font-weight: 600;
+}
+
+.nav-btn.primary:hover {
+  background: #f2f2f2;
+}
+
+.nav-btn.outline {
+  border: 1px solid #fff;
+}
+
+.currency-btn {
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .nav-center {
+    display: none;
+  }
+}
+
+.profile-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.profile-dropdown:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.username {
+  font-weight: 500;
+}
